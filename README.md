@@ -46,7 +46,7 @@
   ...
 
   int main(int argc, char *argv[]) {
-    log("test");
+    log("Debug Project aa\n"); // DEBUG가 정의되어 있는지 확인하기 위함
     return 0;
   }
   ```
@@ -67,7 +67,7 @@
   #include <stdlib.h>
   
   int main(int argc, char *argv[]) {
-    log("Project aa\n");
+    log("Debug Project aa\n"); // DEBUG가 정의되어 있는지 확인하기 위함
 
     int myNumber;
     scanf("%d", &myNumber);
@@ -81,10 +81,14 @@
 
 ## 팁
 ### 주석 처리 단축키: `Ctrl + /`
+    - `#define DEBUG`는 주석 처리 단축키로 관리해야 오타가 적음
+
 ### 컴파일 및 실행 단축키: `F11`
-### `.layout`파일
-  - 프로젝트를 닫을 때 생성됨 (e.g., 새 프로젝트 생성, 프로젝트 종료, dev-c++ 프로그램 종료)
-    - 파일 >> 새로 만들기 >> 프로젝트
-    - 파일 >> 프로젝트 종료
-    - 파일 >> Dev-C++ 종료
-    - `Alt + F4`
+
+### `.layout`파일은 프로젝트를 닫을 때 생성됨
+    - [새 프로젝트 생성] 파일 >> 새로 만들기 >> 프로젝트
+    - [프로젝트 종료] 파일 >> 프로젝트 종료
+    - [프로그램 종료] 파일 >> Dev-C++ 종료
+    - [프로그램 종료] `Alt + F4`
+   
+### 프로젝트 종료하기 전 `//#define DEBUG`과 `컴파일 및 실행`하여 정상 버전인지 확인
