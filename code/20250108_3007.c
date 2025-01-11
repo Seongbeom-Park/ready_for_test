@@ -15,7 +15,7 @@ int main() {
 		int value;
 		scanf("%d", &value);
 
-		memo[i+1] = memo[i] + value;
+		memo[i+1] = memo[i] + value; // prefix sum
 	}
 
 	int j;
