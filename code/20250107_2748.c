@@ -8,7 +8,7 @@ void rec(int sum, int *v, int position, int n, int m, int *answer) {
 		if (sum == m) *answer += 1;
 		return;
 	}
-	rec(sum + v[position], v, position + 1, n, m, answer);
+	rec(sum + v[position], v, position + 1, n, m, answer); // 재귀 호출
 	rec(sum - v[position], v, position + 1, n, m, answer);
 }
 
