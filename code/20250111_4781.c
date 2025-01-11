@@ -9,15 +9,15 @@ int main() {
 	int i, j;
 	for (i=0; i<1010; i++) {
 		for(j=0; j<1010;j++) {
-			info[j][i] = -1;
+			info[j][i] = -1; // 바깥 범위는 벽으로 초기화
 		}
 	}
 	
-	int curr_x[1010 * 1010], curr_y[1010 * 1010], curr_len=0;
+	int curr_x[1010 * 1010], curr_y[1010 * 1010], curr_len=0; // BFS 중요 코드
 	int remain = 0;
 	for (i=0; i<n; i++) {
 		for (j=0; j<m; j++) {
-			int x = j+1;
+			int x = j+1; // 벽을 한 겹 두르기 위해 1 더함
 			int y = i+1;
 
 			int status;
@@ -35,9 +35,9 @@ int main() {
 	}
 
 	int days=0;
-	int next_x[1010 * 1010], next_y[1010 * 1010], next_len=0;
-	while(curr_len > 0) {
-		next_len = 0;
+	int next_x[1010 * 1010], next_y[1010 * 1010], next_len=0; // BFS 중요 코드
+	while(curr_len > 0) { // BFS 중요 코드
+		next_len = 0; // BFS 중요 코드
 
 		int k;
 		for (k=0; k<curr_len; k++) {
@@ -70,10 +70,10 @@ int main() {
 		}
 		remain -= next_len;
 		for (k=0; k<next_len; k++) {
-			curr_x[k] = next_x[k];
-			curr_y[k] = next_y[k];
+			curr_x[k] = next_x[k]; // BFS 중요 코드
+			curr_y[k] = next_y[k]; // BFS 중요 코드
 		}
-		curr_len = next_len;
+		curr_len = next_len; // BFS 중요 코드
 		days++;
 	}
 
