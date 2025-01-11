@@ -10,7 +10,7 @@ int main() {
 	int i;
 	for (i = 0; i < 5000; i++) {
 		if (text[i] == 't') printf("%d ", i + 1);
-		if (text[i] == 0) break;
+		if (text[i] == 0) break; // 문자열 iteration 방법
 	}
 	return 0;
 }
