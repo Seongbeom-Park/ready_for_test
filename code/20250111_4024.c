@@ -6,12 +6,19 @@
 #define LIMW 1000
 #define LIMH 1000
 
-int put_id(int x, int y, int id, int lake[LIMH][LIMW], int h, int w) {
+/*
+int is_lake(int x, int y, int lake[LIMH][LIMW], int h, int w) {
 	if (x < 0 || x >= h) return 0;
+	if (y < 0 || y >= w) return 0;
+ 	return lake[x][y];
+}
+*/
+int put_id(int x, int y, int id, int lake[LIMH][LIMW], int h, int w) { // DFS 중요 코드
+	if (x < 0 || x >= h) return 0; // 범위 벗어날 경우 빠른 종료 (early termination)
 	if (y < 0 || y >= w) return 0;
 	
 	lake[x][y] = id;
-	if (lake[x-1][y-1] == 0) put_id(x-1, y-1, id, lake, h, w);
+	if (lake[x-1][y-1] == 0) put_id(x-1, y-1, id, lake, h, w); // if (is_lake(x, y, lake, h, w) == 0) put_id(x-1, y-1, id, lake, h, w);
 	if (lake[x-1][y] == 0) put_id(x-1, y, id, lake, h, w);
 	if (lake[x-1][y+1] == 0) put_id(x-1, y+1, id, lake, h, w);
 	if (lake[x][y-1] == 0) put_id(x, y-1, id, lake, h, w);
