@@ -15,8 +15,10 @@ int main() {
 
 	int memo[500], i;
 	for (i=0; i<n; i++) {
-		memo[i] = fib(i, memo);
+		memo[i] = fib(i, memo); // 메모이제이션
 	}
 	printf("%d", memo[n-1]);
 	return 0;
 }
+
+// fib을 여러번 호출하는 경우에는 입력 중 최대값을 찾아서 미리 연산해둔다.
