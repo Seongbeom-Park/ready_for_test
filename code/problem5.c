@@ -4,7 +4,8 @@
 int main() {
 	int curr, target;
 	scanf("%d %d", &curr, &target);
-	
+
+	// 그리디
 	int count = 0;
 	int diff = target - curr;
 
