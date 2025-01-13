@@ -30,8 +30,10 @@ int main() {
 		int code;
 		scanf("%d", &code);
 		log("%d\n", code);
-		
+
+		// 도돌이표 플레그 셋
 		if (code == 0) repeat_flag = 1;
+		// 도돌이표 끝났을 때 큐 2번 출력
 		if (code == 111) {
 			repeat_flag = 0;
 			int j;
@@ -42,8 +44,9 @@ int main() {
 				print_code_to_str(repeat[j]);
 			}
 		}
-		
+		// 도돌이표 중에는 저장
 		if (repeat_flag) repeat[repeat_len++] = code;
+		// 이외에는 출력
 		else print_code_to_str(code);
 	}
 	return 0;
