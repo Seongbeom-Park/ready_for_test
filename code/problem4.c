@@ -12,7 +12,8 @@ int main() {
 	for (i=0; i<n; i++) {
 		scanf("%d", &value[i]);
 	}
-	
+
+	// 브루트포스
 	int curr=0, count=0;
 	while (curr < n) {
 		curr += value[curr];
