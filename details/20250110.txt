@@ -1,0 +1,56 @@
+구글 밋
+화면 공유
+
+===
+
+cc. 3215 : 최단 경로 1 - DFS (30.7%, 나 25분)
+dd. 1512 : 숫자 등고선 - 문자열 (55.6%, 나 6분)
+
+https://codeup.kr/problem.php?id=3215
+https://codeup.kr/problem.php?id=1512
+
+===
+DP 풀기
+계산 복잡도 줄이기
+===
+
+1:30 문제 읽기 시작
+3:40 char arr[27] = "A-Z";
+5:40 int edge
+6:30 connection[27][1000]
+7:40 printf("%d", 'A');
+11:00 int shortest() {}
+11:30 startnode = startnode - 'A'
+13:00 int short
+16:10 shortest(connection, i+'A'
+16:50 short +=
+18:35 return short
+23:00 #??
+23:30 (아 이거 뭔지 아는데)
+24:30 #define black gray white
+37:55 value[27]
+39:30 value += short
+40:30 value += short 삭제
+41:20 value[27] 삭제
+42:20 스톱 & 다음 문제 준비
+
+43:30 다음 문제 읽기 시작
+50:00 1번째 for 루프에서 멈춰있음
+52:14 (sx-i) + (sx-j)
+53:00 컴파일
+57:55 sx로 잘못 작성한 것 확인하고 sy로 바꿈
+
+
+
+
+
+
+
+
+===
+중간 중간 저장하고 실행하자. 너 전문가 아니야.
+color[27] = {0} 이거 제대로 초기화 됨?
+30분 넘었는데 왜 다음 문제 안품?
+맨해튼 거리 모르나?
+
+20분 시간 정하고 못풀면 넘어가기
